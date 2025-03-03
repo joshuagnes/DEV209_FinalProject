@@ -1,15 +1,61 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@import "tailwindcss";
+@tailwind utilities;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Custom styles */
+.bg-home {
+  @apply h-screen bg-cover bg-center;
+  background-image: url('/background.jpg');
 }
 
+.home-container {
+  @apply flex flex-col items-center justify-center min-h-screen bg-gray-100/50 text-center px-4;
+}
+
+.home-title {
+  @apply text-4xl font-bold text-blue-700 mb-4;
+}
+
+.home-description {
+  @apply text-lg text-gray-600 mb-6;
+}
+
+.search-input {
+  @apply w-full max-w-md p-3 border border-gray-300 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500;
+}
+
+.button {
+  @apply px-6 py-3 rounded-lg shadow-md text-white;
+}
+
+.plan-button {
+  @apply bg-blue-500 hover:bg-blue-600;
+}
+
+.trips-button {
+  @apply bg-green-500 hover:bg-green-600;
+}
+
+/* MyTrips page styles */
+.trips-container {
+  @apply p-6;
+}
+
+.trips-title {
+  @apply text-2xl font-bold text-blue-600;
+}
+
+.trips-empty {
+  @apply mt-4 text-gray-600;
+}
+
+.trip-list {
+  @apply mt-4;
+}
+
+.trip-item {
+  @apply p-4 border mt-2 rounded bg-gray-100;
+}
+
+.trip-item strong {
+  @apply font-semibold;
+}
